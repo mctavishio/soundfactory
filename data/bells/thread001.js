@@ -32,18 +32,18 @@ const baseweights = Object.entries(speeds).reduce( (acc,entry) => {
 }, {});
 
 const harmonicweights = {
-    lowi: 1,
-    i: 10,
-    I: 20,
-    II: 5,
-    III: 5,
-    iii: 5,
-    IV: 10,
-    V: 10,
-    VI: 6,
-    VII: 2,
-    vii: 4,
-    VIII: 10,
+    lowi: 2,
+    i: 4,
+    I: 4,
+    II: 3,
+    III: 1,
+    iii: 3,
+    IV: 2,
+    V: 4,
+    VI: 2,
+    VII: 1,
+    vii: 3,
+    VIII: 2,
 };
 
 console.log("speeds = " + JSON.stringify(speeds));
@@ -75,12 +75,36 @@ console.log("weights = " + JSON.stringify(weights));
 
 const notes = tools.reifyWeightedArray( Object.entries(weights).map( w=>{ return [w[0],Math.floor(w[1])] } ) );
 console.log("notes = " + JSON.stringify(notes));
-
+const nnotes = notes.length;
 console.log("[0...9] = " + [...Array(10).keys()]);
 
-let scores = rawsoundfiles.reduce( (score, rawsoundfile) => {
-  
-});
+const nthreads = 16;
+const ntones = 16;
+const threadlength = 4*60;
+const echos = ["0.6 0.6 2100 0.6", "0.6 0.6 3130 0.4 0.6 0.6 1408 0.4", "0.4 0.4 1200 0.6 0.8 0.8 4148 0.6", "0.6 0.6 2000 0.6 0.8 0.8 3100 0.4"]
+let catalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
+
+  catalog[rawsoundfile] = [...Array(nthreads).keys()].reduce( (threads,j) => {
+    let threadstr="sox ";
+    let thread = [...Array(ntones).keys()].reduce( (tones,k) => {
+      let tone = notes[tools.randominteger(0,nnotes)];
+      tones.push( [ tone, rawsoundfile+"_"+tone+".mp3" ]);
+      threadstr = threadstr + " " + rawsoundfile+"_"+tone+".mp3";
+      return tones;
+    }, [] );
+    threads.push( [ thread, threadstr + " " + rawsoundfile + "thread" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[tools.randominteger(0,echos.length)] + " trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
+    return threads;
+
+  }, []);
+
+  return catalog;
+
+},{});
+
+console.log(catalog["bell11"].map( thread => { return thread[1] } ));
+
+// sox typewriter1_I.mp3 typewriter1_i.mp3 typewriter1_II.mp3 typewriter1_iii.mp3 typewriter1_IV.mp3 typewriter1_iii.mp3 left.mp3
+
 
 // let nextstepsfile = prefix+"_"+timestamp+".sh";
 
