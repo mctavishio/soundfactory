@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "sox-stream": "^2.0.6",
+    "stream-handbook": "^1.0.0"
+  }
+}
