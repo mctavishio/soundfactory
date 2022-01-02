@@ -180,17 +180,17 @@ let nextsteps = rawsoundfiles.reduce( (nextstepstr,file) => {
 	return nextstepstr;
 }, initialize);
 nextsteps = nextsteps + `
-    cp *.js ${newdir};
-    cd ${newdir};`;
+    cp *.js ${newdir};`;
   
 nextsteps = nextsteps + rawsoundfiles.reduce( (nextstepstr,file) => {
   nextstepstr = nextstepstr + `
+    cd ${newdir};
     sox -m ${file}_thread_*.mp3 ${file}_harmonictwist_all.mp3 fade 0 -0 14 norm -2;
     sox -m ${file}_bendthread_*.mp3 ${file}_bendtwist_all.mp3 fade 0 -0 14 norm -2;
     sox -m ${file}*thread_*.mp3 ${file}_twist_all.mp3 fade 0 -0 14 norm -2;
-    sox "|sox -m ${file}_thread_*.mp3 -p fade 0 -0 14 norm -3" ${file}_harmonictwist_all_fm.mp3 gain -4 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801;
-    sox "|sox -m ${file}_bendthread_*.mp3 -p fade 0 -0 14 norm -3" ${file}_bendtwist_all_fm.mp3 gain -4 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801;
-    sox "|sox -m ${file}*thread_*.mp3 -p fade 0 -0 14 norm -3" ${file}_twist_all_fm.mp3 gain -4 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801;`
+    sox "|sox -m ${file}_thread_*.mp3 -p fade 0 -0 14 norm -3" ${file}_harmonictwist_all_fm.mp3 gain -3 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801;
+    sox "|sox -m ${file}_bendthread_*.mp3 -p fade 0 -0 14 norm -3" ${file}_bendtwist_all_fm.mp3 gain -3 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801;
+    sox "|sox -m ${file}*thread_*.mp3 -p fade 0 -0 14 norm -3" ${file}_twist_all_fm.mp3 gain -3 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801;`
   return nextstepstr;
 }, "");
 
