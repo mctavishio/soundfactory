@@ -1,7 +1,7 @@
 const fs = require("fs");
 const tools = require("../tools.js");
 const rawsoundfiledata = require("./soundfiles.js");
-const prefix = "thread001";
+const prefix = "thread003";
 const instrument = "bells";
 const rawsoundfiles = ["bell11", "bell13", "bell2", "bell6", "bell9", "longbell"];
 
@@ -11,15 +11,15 @@ const datetimestr = datetime.toDateString();
 const datetimeISOstr = datetime.toISOString();
 const intervals = {
     lowi: basetone => { return Math.floor(basetone/4) },
-    i: basetone => { return Math.floor(basetone/2) },
+    bassi: basetone => { return Math.floor(basetone/2) },
     I: basetone => { return Math.floor(basetone/1) },
     II: basetone => { return Math.floor(basetone*9/8) },
-    III: basetone => { return Math.floor(basetone*5/4) },
+    // III: basetone => { return Math.floor(basetone*5/4) },
     iii: basetone => { return Math.floor(basetone*6/5) },
     IV: basetone => { return Math.floor(basetone*4/3) },
     V: basetone => { return Math.floor(basetone*3/2) },
     VI: basetone => { return Math.floor(basetone*5/3) },
-    VII: basetone => { return Math.floor(basetone*15/8) },
+    // VII: basetone => { return Math.floor(basetone*15/8) },
     vii: basetone => { return Math.floor(basetone*9/5) },
     VIII: basetone => { return Math.floor(basetone*2) },
 };
@@ -35,16 +35,16 @@ const baseweights = Object.entries(speeds).reduce( (acc,entry) => {
 
 const harmonicweights = {
     lowi: 1,
-    i: 3,
-    I: 3,
-    II: 3,
-    III: 1,
-    iii: 3,
-    IV: 3,
-    V: 4,
-    VI: 2,
-    VII: 1,
-    vii: 3,
+    bassi: 1,
+    I: 4,
+    II: 4,
+    // III: 2,
+    iii: 4,
+    IV: 5,
+    V: 6,
+    VI: 3,
+    // VII: 2,
+    vii: 4,
     VIII: 2,
 };
 
@@ -85,19 +85,23 @@ console.log("echos = " + echos);
 
 // const echos = ["0.8 0.6 2100 0.6 4248 0.4", "0.8 0.6 3130 0.6 1408 0.4", "0.8 0.6 1200 0.6 4148 0.6", "0.6 0.4 2000 0.4 3100 0.6 4480 0.3", "0.6 0.4 4080 0.4 2080 0.4 960 0.4", "0.8 0.7 40 0.25 63 0.3"]
 let catalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
-  let ntones = 3*Math.ceil(threadlength/rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration);
+  // let ntones = 2*Math.ceil(threadlength/rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration);
   tools.shufflearray(echos);
   catalog[rawsoundfile] = [...Array(nthreads).keys()].reduce( (threads,j) => {
     let threadstr="sox ";
-    let thread = [...Array(ntones).keys()].reduce( (tones,k) => {
+    let dur = 0;
+    let tones = [];
+    while(dur < threadlength) {
       let tone = notes[tools.randominteger(0,nnotes)];
-      tones.push( [ tone, rawsoundfile+"_"+tone+".mp3" ]);
-      threadstr = threadstr + " " + rawsoundfile+"_"+tone+".mp3";
-      return tones;
-    }, [] );
-    // threads.push( [ thread, threadstr + " " + rawsoundfile + "thread" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[tools.randominteger(0,echos.length)] + " trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
+      let tonefile = rawsoundfile+"_"+tone;
+      console.log(`dur=${dur}`);
+      tones.push( [ tone, tonefile+".mp3" ]);
+      console.log(`tonefile=${tonefile}`);
+      dur = dur + rawsoundfiledata.filter(f => f.id===tonefile)[0].duration;
+      threadstr = threadstr + " " + tonefile+".mp3";
+    }
     //with echo
-    threads.push( [ thread, threadstr + " " + rawsoundfile + "_thread_" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[j%echos.length] + " trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
+    threads.push( [ tones, threadstr + " " + rawsoundfile + "_thread_" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[j%echos.length] + "  norm -2"  ] );
     //no echo
     // threads.push( [ thread, threadstr + " " + rawsoundfile + "_thread_" + j.toString().padStart(3, "0") + ".mp3 trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
     return threads;
@@ -106,19 +110,24 @@ let catalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
 },{});
 
 let bendcatalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
-  let ntones = 3*Math.ceil(threadlength/rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration);
-  console.log(`rawsoundfile = ${rawsoundfile} ... ntones = ${ntones}`);
+  // let ntones = 2*Math.ceil(threadlength/rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration);
+  // console.log(`rawsoundfile = ${rawsoundfile} ... ntones = ${ntones}`);
   tools.shufflearray(echos);
   catalog[rawsoundfile] = [...Array(nthreads).keys()].reduce( (threads,j) => {
     let threadstr="sox ";
-    let thread = [...Array(ntones).keys()].reduce( (tones,k) => {
-      let tone = tools.randominteger(50,200)/100;
-      tones.push( [ "bend_"+tone, rawsoundfile+"_bend_"+tone+".mp3" ]);
-      threadstr = threadstr + ` "|sox ${rawsoundfile}.mp3 -p speed ${tone} norm -4"`;
-      return tones;
-    }, [] );
+    let dur = 0;
+    let tones = [];
+    while(dur < threadlength) {
+
+      let tone = notes[tools.randominteger(0,nnotes)];
+      let tonefile = rawsoundfile+"_"+tone;
+      tones.push( [ tone, tonefile+".mp3" ]);
+      console.log(`dur=${dur}`);
+      dur = dur + rawsoundfiledata.filter(f => f.id===tonefile)[0].duration;
+      threadstr = threadstr + " " + tonefile+".mp3";
+    }
     //with echo
-    threads.push( [ thread, threadstr + " " + rawsoundfile + "_bendthread_" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[(j+1)%echos.length] + " trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
+    threads.push( [ tones, threadstr + " " + rawsoundfile + "_bendthread_" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[(j+1)%echos.length] + " norm -2"  ] );
     //no echo
     // threads.push( [ thread, threadstr + " " + rawsoundfile + "_bendthread_" + j.toString().padStart(3, "0") + ".mp3  trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
     return threads;
@@ -203,9 +212,11 @@ nextsteps = nextsteps + rawsoundfiles.reduce( (nextstepstr,file1) => {
     sox -M "|sox  -v 0.8 ${file1}_bendtwist_all_fm.mp3 -c1 -p pad 1.4 0" "|sox -v 0.8 ${file2}_bendtwist_all_fm.mp3 -c1 -p" ${file1}_${file2}_bendtwist_all_fm.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2;
     sox -M "|sox  -v 0.8 ${file1}_harmonictwist_all_fm.mp3 -c1 -p pad 1.8 0" "|sox -v 0.8 ${file2}_bendtwist_all_fm.mp3 -c1 -p" ${file1}_${file2}_twist_all_fm.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2;`;
     [...Array(Math.floor(nthreads/4)).keys()].forEach( j => {
+      let k1 = tools.randominteger(0,nthreads);
+      let k2 = tools.randominteger(0,nthreads);
       nextstepstr = nextstepstr + `
-    sox -M "|sox  -v 0.8 ${file1}_thread_${j.toString().padStart(3, "0")}.mp3 -c1 -p pad 1.3 0" "|sox -v 0.8 ${file2}_thread_${j.toString().padStart(3, "0")}.mp3 -c1 -p" ${file1}_${file2}_thread_${j.toString().padStart(3, "0")}.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2;
-    sox -M "|sox  -v 0.8 ${file1}_bendthread_${j.toString().padStart(3, "0")}.mp3 -c1 -p pad 1.4 0" "|sox -v 0.8 ${file2}_bendthread_${j.toString().padStart(3, "0")}.mp3 -c1 -p" ${file1}_${file2}_bendthread_${j.toString().padStart(3, "0")}.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2;`
+    sox -M "|sox  -v 0.8 ${file1}_thread_${k1.toString().padStart(3, "0")}.mp3 -c1 -p pad 1.3 0" "|sox -v 0.8 ${file2}_thread_${k2.toString().padStart(3, "0")}.mp3 -c1 -p" ${file1}_${file2}_thread_${j.toString().padStart(3, "0")}.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2;
+    sox -M "|sox  -v 0.8 ${file1}_bendthread_${k2.toString().padStart(3, "0")}.mp3 -c1 -p pad 1.4 0" "|sox -v 0.8 ${file2}_bendthread_${k1.toString().padStart(3, "0")}.mp3 -c1 -p" ${file1}_${file2}_bendthread_${j.toString().padStart(3, "0")}.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2;`
     });
   })
   return nextstepstr;
@@ -226,8 +237,7 @@ nextsteps = nextsteps + rawsoundfiles.reduce( (nextstepstr,file1) => {
       nextstepstr = nextstepstr + `
       play ${file1}_${file2}_harmonictwist_all_fm.mp3;
       play ${file1}_${file2}_bendtwist_all_fm.mp3;
-      play ${file1}_${file2}_twist_all_fm.mp3;
-      play ${file1}_${file2}_thread_000.mp3`
+      play ${file1}_${file2}_twist_all_fm.mp3;`
     })
   return nextstepstr;
 }, "");

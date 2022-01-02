@@ -1,6 +1,7 @@
 const fs = require("fs");
 const tools = require("./tools.js");
-const rawsoundfiledata = require("./rawsoundfiledata.js");
+// const rawsoundfiledata = require("./rawsoundfiledata.js");
+const rawsoundfiledata = require("./bells/soundfiles.js");
 const prefix = "harmonics";
 const datetime = new Date();
 const timestamp = datetime.getTime();
@@ -8,7 +9,7 @@ const datetimestr = datetime.toDateString();
 const datetimeISOstr = datetime.toISOString();
 const intervals = {
     lowi: basetone => { return Math.floor(basetone/4) },
-    i: basetone => { return Math.floor(basetone/2) },
+    bassi: basetone => { return Math.floor(basetone/2) },
     I: basetone => { return Math.floor(basetone/1) },
     II: basetone => { return Math.floor(basetone*9/8) },
     III: basetone => { return Math.floor(basetone*5/4) },
@@ -32,7 +33,7 @@ const baseweights = Object.entries(speeds).reduce( (acc,entry) => {
 
 const harmonicweights = {
     lowi: 1,
-    i: 10,
+    bassi: 10,
     I: 20,
     II: 5,
     III: 5,

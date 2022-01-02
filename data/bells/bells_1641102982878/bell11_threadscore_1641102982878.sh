@@ -1,0 +1,16 @@
+sox  bell11_lowi.mp3 bell11_vii.mp3 bell11_bassi.mp3 bell11_I.mp3 bell11_I.mp3 bell11_bassi.mp3 bell11_lowi.mp3 bell11_thread_000.mp3 echos 0.7 0.6 1987 0.3 5955 0.2  norm -2;
+sox  bell11_V.mp3 bell11_bassi.mp3 bell11_V.mp3 bell11_lowi.mp3 bell11_I.mp3 bell11_lowi.mp3 bell11_thread_001.mp3 echos 0.7 0.7 138 0.5 4350 0.4  norm -2;
+sox  bell11_I.mp3 bell11_II.mp3 bell11_lowi.mp3 bell11_II.mp3 bell11_II.mp3 bell11_bassi.mp3 bell11_vii.mp3 bell11_bassi.mp3 bell11_thread_002.mp3 echos 0.6 0.7 510 0.4 3112 0.4  norm -2;
+sox  bell11_V.mp3 bell11_iii.mp3 bell11_II.mp3 bell11_bassi.mp3 bell11_lowi.mp3 bell11_lowi.mp3 bell11_thread_003.mp3 echos 0.6 0.7 2206 0.5 2575 0.3  norm -2;
+sox  bell11_iii.mp3 bell11_VIII.mp3 bell11_lowi.mp3 bell11_IV.mp3 bell11_bassi.mp3 bell11_V.mp3 bell11_VIII.mp3 bell11_lowi.mp3 bell11_thread_004.mp3 echos 0.6 0.7 1533 0.5 4846 0.3  norm -2;
+sox  bell11_I.mp3 bell11_I.mp3 bell11_lowi.mp3 bell11_II.mp3 bell11_bassi.mp3 bell11_iii.mp3 bell11_IV.mp3 bell11_bassi.mp3 bell11_thread_005.mp3 echos 0.6 0.7 929 0.4 5321 0.2  norm -2;
+sox  bell11_VIII.mp3 bell11_iii.mp3 bell11_bassi.mp3 bell11_bassi.mp3 bell11_bassi.mp3 bell11_bassi.mp3 bell11_V.mp3 bell11_iii.mp3 bell11_vii.mp3 bell11_V.mp3 bell11_thread_006.mp3 echos 0.7 0.6 92 0.5 4461 0.2  norm -2;
+sox  bell11_V.mp3 bell11_IV.mp3 bell11_bassi.mp3 bell11_lowi.mp3 bell11_lowi.mp3 bell11_VIII.mp3 bell11_lowi.mp3 bell11_thread_007.mp3 echos 0.7 0.7 1688 0.3 3580 0.2  norm -2;
+sox  bell11_vii.mp3 bell11_iii.mp3 bell11_VIII.mp3 bell11_bassi.mp3 bell11_lowi.mp3 bell11_bassi.mp3 bell11_II.mp3 bell11_lowi.mp3 bell11_bendthread_000.mp3 echos 0.6 0.7 929 0.4 5321 0.2 norm -2;
+sox  bell11_vii.mp3 bell11_iii.mp3 bell11_iii.mp3 bell11_bassi.mp3 bell11_bassi.mp3 bell11_II.mp3 bell11_VIII.mp3 bell11_I.mp3 bell11_lowi.mp3 bell11_bendthread_001.mp3 echos 0.6 0.7 510 0.4 3112 0.4 norm -2;
+sox  bell11_bassi.mp3 bell11_I.mp3 bell11_bassi.mp3 bell11_I.mp3 bell11_bassi.mp3 bell11_bassi.mp3 bell11_II.mp3 bell11_lowi.mp3 bell11_bendthread_002.mp3 echos 0.6 0.7 2206 0.5 2575 0.3 norm -2;
+sox  bell11_lowi.mp3 bell11_IV.mp3 bell11_bassi.mp3 bell11_VIII.mp3 bell11_bassi.mp3 bell11_lowi.mp3 bell11_bendthread_003.mp3 echos 0.7 0.7 1688 0.3 3580 0.2 norm -2;
+sox  bell11_iii.mp3 bell11_bassi.mp3 bell11_V.mp3 bell11_lowi.mp3 bell11_bassi.mp3 bell11_lowi.mp3 bell11_bendthread_004.mp3 echos 0.7 0.6 92 0.5 4461 0.2 norm -2;
+sox  bell11_bassi.mp3 bell11_V.mp3 bell11_lowi.mp3 bell11_bassi.mp3 bell11_lowi.mp3 bell11_bendthread_005.mp3 echos 0.6 0.7 1533 0.5 4846 0.3 norm -2;
+sox  bell11_bassi.mp3 bell11_II.mp3 bell11_iii.mp3 bell11_V.mp3 bell11_I.mp3 bell11_iii.mp3 bell11_iii.mp3 bell11_bassi.mp3 bell11_iii.mp3 bell11_V.mp3 bell11_iii.mp3 bell11_bassi.mp3 bell11_bendthread_006.mp3 echos 0.7 0.7 138 0.5 4350 0.4 norm -2;
+sox  bell11_bassi.mp3 bell11_bassi.mp3 bell11_lowi.mp3 bell11_bassi.mp3 bell11_VIII.mp3 bell11_lowi.mp3 bell11_bendthread_007.mp3 echos 0.7 0.6 1987 0.3 5955 0.2 norm -2;

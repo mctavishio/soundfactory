@@ -1,7 +1,7 @@
 const fs = require("fs");
 const tools = require("../tools.js");
 const rawsoundfiledata = require("./soundfiles.js");
-const prefix = "thread001";
+const prefix = "thread002";
 const instrument = "bells";
 const rawsoundfiles = ["bell11", "bell13", "bell2", "bell6", "bell9", "longbell"];
 
@@ -85,7 +85,7 @@ console.log("echos = " + echos);
 
 // const echos = ["0.8 0.6 2100 0.6 4248 0.4", "0.8 0.6 3130 0.6 1408 0.4", "0.8 0.6 1200 0.6 4148 0.6", "0.6 0.4 2000 0.4 3100 0.6 4480 0.3", "0.6 0.4 4080 0.4 2080 0.4 960 0.4", "0.8 0.7 40 0.25 63 0.3"]
 let catalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
-  let ntones = 3*Math.ceil(threadlength/rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration);
+  let ntones = 2*Math.ceil(threadlength/rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration);
   tools.shufflearray(echos);
   catalog[rawsoundfile] = [...Array(nthreads).keys()].reduce( (threads,j) => {
     let threadstr="sox ";
@@ -97,7 +97,7 @@ let catalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
     }, [] );
     // threads.push( [ thread, threadstr + " " + rawsoundfile + "thread" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[tools.randominteger(0,echos.length)] + " trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
     //with echo
-    threads.push( [ thread, threadstr + " " + rawsoundfile + "_thread_" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[j%echos.length] + " trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
+    threads.push( [ thread, threadstr + " " + rawsoundfile + "_thread_" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[j%echos.length] + "  norm -2"  ] );
     //no echo
     // threads.push( [ thread, threadstr + " " + rawsoundfile + "_thread_" + j.toString().padStart(3, "0") + ".mp3 trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
     return threads;
@@ -106,7 +106,7 @@ let catalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
 },{});
 
 let bendcatalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
-  let ntones = 3*Math.ceil(threadlength/rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration);
+  let ntones = 2*Math.ceil(threadlength/rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration);
   console.log(`rawsoundfile = ${rawsoundfile} ... ntones = ${ntones}`);
   tools.shufflearray(echos);
   catalog[rawsoundfile] = [...Array(nthreads).keys()].reduce( (threads,j) => {
@@ -118,7 +118,7 @@ let bendcatalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
       return tones;
     }, [] );
     //with echo
-    threads.push( [ thread, threadstr + " " + rawsoundfile + "_bendthread_" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[(j+1)%echos.length] + " trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
+    threads.push( [ thread, threadstr + " " + rawsoundfile + "_bendthread_" + j.toString().padStart(3, "0") + ".mp3 echos " + echos[(j+1)%echos.length] + " norm -2"  ] );
     //no echo
     // threads.push( [ thread, threadstr + " " + rawsoundfile + "_bendthread_" + j.toString().padStart(3, "0") + ".mp3  trim 0 "+threadlength+" fade 0 -0 12 norm -2"  ] );
     return threads;
