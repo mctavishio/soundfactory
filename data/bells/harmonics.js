@@ -1,7 +1,7 @@
 const fs = require("fs");
-const tools = require("./tools.js");
-// const rawsoundfiledata = require("./rawsoundfiledata.js");
-const rawsoundfiledata = require("./bells/soundfiles.js");
+const tools = require("../tools.js");
+const rawsoundfiledata = require("./rawsoundfiledata.js");
+// const rawsoundfiledata = require("./bells/soundfiles.js");
 const prefix = "harmonics";
 const datetime = new Date();
 const timestamp = datetime.getTime();
@@ -61,7 +61,7 @@ let nextstepsfile = prefix+"_"+timestamp+".sh";
 let nextsteps = rawsoundfiledata.reduce( (acc,sound) => {
 	acc = acc + Object.entries(speeds).reduce( (translations, speed) => {
 		let newsoundfile = `${sound.id}_${speed[0]}.mp3`;
-		translations = translations + `rm ${newsoundfile}; sox ${sound.file} ${newsoundfile} gain -12 speed ${speed[1]} norm -6; \n`; //silence -l 1 1.0 0.01%  -1 3.0 0.01%
+		translations = translations + `rm ${newsoundfile}; sox ${sound.file} ${newsoundfile} gain -12 speed ${speed[1]} norm -4; \n`; //silence -l 1 1.0 0.01%  -1 3.0 0.01%
 		// console.log("translations = " + translations);
 		return translations;
 	}, "");
@@ -72,34 +72,14 @@ let nextsteps = rawsoundfiledata.reduce( (acc,sound) => {
 
 console.log("nextsteps = " + nextsteps);
 
-// newbooks.map(b=>b.id).forEach( dir => {
-// 	nextSteps = nextSteps + `
-// cd ${dir}
-// for file in *.pdf; do magick convert $file -resize 1920 $file.png; done;
-// for file in *pdf.png; do mv "$file" "$\{file/.pdf.png/.png\}"; done;
-// for file in *.png; do magick convert $file -resize 640 $file.small.png; done;
-// for file in *png.small.png; do mv "$file" "$\{file/.png.small.png/-small.png\}"; done;
-// pdfunite *.pdf book.pdf
-// ffmpeg -framerate 1 -i page%03d.png -c:v libx264 -r 24 -pix_fmt yuv420p book.mp4
-// cd ..
-// cp McTavishResume202011_extensive.pdf ${dir}
-// zip ${dir}.zip ${dir}
-// mv ${dir}.zip ${dir}/book.zip
-// mv ${dir} ${librarydir}
-// `;
-// });
-// nextSteps = nextSteps + `
-// cp ${nextstepsfile} ${librarydir}/nextSteps.sh
-// mv ${librarybookfile} ${librarydir}/library.js
-// mv librarybooks_old.js librarybooks_older.js
 // gsutil -m cp -r ${librarydir} gs://bookfactory/
-// `;
+
 
 fs.writeFileSync(nextstepsfile, nextsteps, (err) => {
   if (err)
     console.log(err);
   else {
-    console.log("File written successfully\n");
+    console.log(`${nextstepsfile} file written successfully\n`);
   }
 });
 

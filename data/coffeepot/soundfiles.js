@@ -1,0 +1,17 @@
+module.exports = [
+{id:"coffepot1eminor", file:"coffepot1eminor.mp3", duration:72.886009, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_I", file:"coffepot1eminor_I.mp3", duration:72.907007, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_II", file:"coffepot1eminor_II.mp3", duration:64.809002, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_IV", file:"coffepot1eminor_IV.mp3", duration:54.700000, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_V", file:"coffepot1eminor_V.mp3", duration:48.612993, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_VI", file:"coffepot1eminor_VI.mp3", duration:43.780998, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_VIII", file:"coffepot1eminor_VIII.mp3", duration:36.466009, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_bassIV", file:"coffepot1eminor_bassIV.mp3", duration:109.373991, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_bassV", file:"coffepot1eminor_bassV.mp3", duration:48.612993, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_bassi", file:"coffepot1eminor_bassi.mp3", duration:145.789002, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_lowi", file:"coffepot1eminor_lowi.mp3", duration:291.551995, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_majIII", file:"coffepot1eminor_majIII.mp3", duration:58.330998, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_majVII", file:"coffepot1eminor_majVII.mp3", duration:38.896009, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_miniii", file:"coffepot1eminor_miniii.mp3", duration:60.760000, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"coffepot1eminor_minvii", file:"coffepot1eminor_minvii.mp3", duration:40.515011, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+]
