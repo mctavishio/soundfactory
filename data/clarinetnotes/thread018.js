@@ -5,7 +5,8 @@ const rawsoundfiledata = require("./soundfiles.js");
 const prefix = "thread018";
 const instrument = "clarinet1";
 // const rawsoundfiles = ["kantele1", "kantele2", "kantele3"];
-const rawsoundfiles = ["clarinet1"];
+// const rawsoundfiles = ["clarinet1"];
+const rawsoundfiles = ["clarinet1", "clarinetnotes_a", "clarinetnotes_b", "clarinetnotes_c", "clarinetnotes_d", "clarinetnotes_e", "clarinetnotes_f", "clarinetnotes_g", "clarinetnotes_h", "clarinetnotes_i"];
 
 const datetime = new Date();
 const timestamp = datetime.getTime();
@@ -148,7 +149,7 @@ threadp.push(
 //   } ) ("noise", { lowi: 0, bassi: 0, bassV: 0, bassIV: 0, I: 2, II: 0, majIII: 0, miniii: 0, IV: 0, V: 0, VI: 0, majVII: 0, minvii: 0, VIII: 0, lownoise: 2, midnoise: 2, highnoise: 2, noise: 4, buzz: 1 })
 // );
 
-const nthreads = 8;
+const nthreads = 4;
 const threadlength = 4*60;
 
 const echos = () => {
@@ -162,6 +163,7 @@ const echos = () => {
 
 let catalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
   catalog[rawsoundfile] = [...Array(nthreads).keys()].reduce( (threads,j) => {
+    console.log(`rawsoundfile = ${rawsoundfile}`);
     let rawsounddur = rawsoundfiledata.filter(f => f.id===rawsoundfile)[0].duration;
     threadp.forEach( (p ,k) => {
     
@@ -175,7 +177,7 @@ let catalog = rawsoundfiles.reduce( (catalog, rawsoundfile) => {
         let tonefile = `${rawsoundfile}_p.id_${notef}`;
         let speed = intervals[notef](1);
         console.log(`speed = ${speed}`);
-        let tonepad = tools.randominteger(0,400)/100;
+        let tonepad = tools.randominteger(0,140)/100;
 
         tones.push( [ notef, tonefile+".mp3", speed, tonepad]);
 
@@ -259,24 +261,23 @@ nextsteps = nextsteps + rawsoundfiles.reduce( (nextstepstr,file) => {
 }, "");
 
 
-// nextsteps = nextsteps + rawsoundfiles.reduce( (nextstepstr,file1) => {
-//   rawsoundfiles.forEach( file2 => {
-//     nextstepstr = nextstepstr + `
-//     sox -M "|sox  -v 0.8 ${file1}_harmonictwist_all.mp3 -c1 -p pad 1.3 0 norm -4" "|sox -v 0.8 ${file2}_harmonictwist_all.mp3 -c1 -p norm -4" ${file1}_${file2}_harmonictwist_all.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2 silence -l 1 0.1 1% -1 2.0 1%;
-//     sox -M "|sox  -v 0.8 ${file1}_bendtwist_all.mp3 -c1 -p pad 1.4 0 norm -4" "|sox -v 0.8 ${file2}_bendtwist_all.mp3 -c1 -p norm -4" ${file1}_${file2}_bendtwist_all.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2 silence -l 1 0.1 1% -1 2.0 1%;
-//     sox -M "|sox  -v 0.8 ${file1}_harmonictwist_all.mp3 -c1 -p pad 1.8 0 norm -4" "|sox -v 0.8 ${file2}_bendtwist_all.mp3 -c1 -p norm -4" ${file1}_${file2}_twist_all.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2 silence -l 1 0.1 1% -1 2.0 1%;
-//     `;
-//     [...Array(Math.floor(nthreads/4)).keys()].forEach( k1 => {
-//         [...Array(Math.floor(nthreads/4)).keys()].forEach( k2 => {
-//         nextstepstr = nextstepstr + `
-//     sox -M "|sox  -v 0.8 ${file1}_thread_${k1.toString().padStart(3, "0")}.mp3 -c1 -p pad 1.3 0 norm -4" "|sox -v 0.8 ${file2}_thread_${k2.toString().padStart(3, "0")}.mp3 -c1 -p norm -4" ${file1}_${file2}_threads_${k1.toString().padStart(3, "0")}_${k2.toString().padStart(3, "0")}.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 gain -4 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801 silence -l 1 0.1 1% -1 2.0 1% norm -2;
-//     sox -M "|sox  -v 0.8 ${file1}_bendthread_${k2.toString().padStart(3, "0")}.mp3 -c1 -p pad 1.4 0 norm -4" "|sox -v 0.8 ${file2}_bendthread_${k1.toString().padStart(3, "0")}.mp3 -c1 -p norm -4" ${file1}_${file2}_bendthreads_${k2.toString().padStart(3, "0")}_${k1.toString().padStart(3, "0")}.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 gain -4 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801 silence -l 1 0.1 1% -1 2.0 1% norm -2;
-//     sox -M "|sox  -v 0.8 ${file1}_thread_${k2.toString().padStart(3, "0")}.mp3 -c1 -p pad 1.4 0 norm -4" "|sox -v 0.8 ${file2}_bendthread_${k1.toString().padStart(3, "0")}.mp3 -c1 -p norm -4" ${file1}_${file2}_thread_bendthread_${k2.toString().padStart(3, "0")}_${k1.toString().padStart(3, "0")}.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 gain -4 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801 silence -l 1 0.1 1% -1 2.0 1% norm -2;`
-//     });
-//     });
-//   })
-//   return nextstepstr;
-// }, "");
+nextsteps = nextsteps + rawsoundfiles.reduce( (nextstepstr,file1) => {
+  rawsoundfiles.forEach( file2 => {
+    threadp.forEach( (p,j) => {
+    nextstepstr = nextstepstr + `
+    sox -M "|sox  -v 0.8 ${file1}_thread_${p.id}_all.mp3 -c1 -p pad 1.3 0 norm -4" "|sox -v 0.8 ${file2}_thread_${p.id}_all.mp3 -c1 -p norm -4" ${file1}_${file2}_thread_${p.id}_all.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 norm -2 silence -l 1 0.1 1% -1 2.0 1%;
+    `;
+    [...Array(Math.floor(nthreads/4)).keys()].forEach( k1 => {
+        [...Array(Math.floor(nthreads/4)).keys()].forEach( k2 => {
+        nextstepstr = nextstepstr + `
+    sox -M "|sox  -v 0.8 ${file1}_thread_${p.id}_${k1.toString().padStart(3, "0")}.mp3 -c1 -p pad 1.3 0 norm -4" "|sox -v 0.8 ${file2}_thread_${p.id}_${k2.toString().padStart(3, "0")}.mp3 -c1 -p norm -4" ${file1}_${file2}_thread_${p.id}_${k1.toString().padStart(3, "0")}_${k2.toString().padStart(3, "0")}.mp3 remix 1v0.7,2v0.3 1v0.3,2v0.7 gain -4 sinc -n 29 -b 100 8000 mcompand "0.005,0.1 -47,-40,-34,-34,-17,-33" 100 "0.003,0.05 -47,-40,-34,-34,-17,-33" 400 "0.000625,0.0125 -47,-40,-34,-34,-15,-33" 1600 "0.0001,0.025 -47,-40,-34,-34,-31,-31,-0,-30" 6400 "0,0.025 -38,-31,-28,-28,-0,-25" gain 15 highpass 22 highpass 22 sinc -n 255 -b 16 -17500 gain 8 lowpass -1 17801 silence -l 1 0.1 1% -1 2.0 1% norm -2;
+    `
+    });
+    });
+    });
+  })
+  return nextstepstr;
+}, "");
 
 // play -M "|sox -v 0.8 bell11_bendthread_000.mp3 -c1 -p pad 1.3 0" "|sox -v 0.8 bell13_bendthread_000.mp3 -c1 -p" remix 1v0.8,2v0.2 1v0.2,2v0.8 norm -4
 //gcloud components update --version 365.0.0

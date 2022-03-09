@@ -1,0 +1,17 @@
+module.exports = [
+{id:"128_c", file:"128_c.mp3", duration:8.077007, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"144_d", file:"144_d.mp3", duration:8.077007, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"192_g", file:"192_g.mp3", duration:8.077007, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"288_d", file:"288_d.mp3", duration:8.077007, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"384_g", file:"384_g.mp3", duration:8.077007, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"432_a", file:"432_a.mp3", duration:8.077007, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"64_c", file:"64_c.mp3", duration:8.077007, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"bird1", file:"bird1.mp3", duration:6.613991, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"bird1_1channel", file:"bird1_1channel.mp3", duration:6.635011, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"bird3", file:"bird3.mp3", duration:6.273991, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"bird3_1channel", file:"bird3_1channel.mp3", duration:6.296009, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"clarinet1", file:"clarinet1.mp3", duration:22.312993, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"clarinet1_1channel", file:"clarinet1_1channel.mp3", duration:22.336009, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+{id:"weatherradio1", file:"weatherradio1.mp3", duration:12.752993, nchannels:2, rate:44100, type:"mp3", bitrate:16},
+{id:"weatherradio1_1channel", file:"weatherradio1_1channel.mp3", duration:12.775011, nchannels:1, rate:44100, type:"mp3", bitrate:16},
+]

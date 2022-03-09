@@ -1,0 +1,117 @@
+harmonicweights = {"lowi":1,"bassi":1,"bassV":3,"bassIV":3,"I":6,"II":5,"majIII":1,"miniii":5,"IV":9,"V":9,"VI":2,"majVII":1,"minvii":4,"VIII":2,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+weights = {"lowi":4,"bassi":2,"bassIV":4.5,"bassV":1.9980000000000002,"I":6,"II":4.44,"majIII":0.8,"miniii":4.165,"IV":6.75,"V":5.994000000000001,"VI":1.2,"majVII":0.533,"minvii":2.22,"VIII":1,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+notes = lowi,lowi,lowi,lowi,bassi,bassi,bassIV,bassIV,bassIV,bassIV,bassV,I,I,I,I,I,I,II,II,II,II,miniii,miniii,miniii,miniii,IV,IV,IV,IV,IV,IV,V,V,V,V,V,VI,minvii,minvii,VIII
+harmonicweights = {"lowi":1,"bassi":1,"bassV":3,"bassIV":3,"I":6,"II":5,"majIII":1,"miniii":5,"IV":9,"V":9,"VI":2,"majVII":1,"minvii":4,"VIII":2,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+weights = {"lowi":4,"bassi":2,"bassIV":4.5,"bassV":1.9980000000000002,"I":6,"II":4.44,"majIII":0.8,"miniii":4.165,"IV":6.75,"V":5.994000000000001,"VI":1.2,"majVII":0.533,"minvii":2.22,"VIII":1,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+notes = lowi,lowi,lowi,lowi,bassi,bassi,bassIV,bassIV,bassIV,bassIV,bassV,I,I,I,I,I,I,II,II,II,II,miniii,miniii,miniii,miniii,IV,IV,IV,IV,IV,IV,V,V,V,V,V,VI,minvii,minvii,VIII
+harmonicweights = {"lowi":1,"bassi":1,"bassV":3,"bassIV":3,"I":6,"II":5,"majIII":1,"miniii":5,"IV":9,"V":9,"VI":2,"majVII":1,"minvii":4,"VIII":2,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+weights = {"lowi":4,"bassi":2,"bassIV":4.5,"bassV":1.9980000000000002,"I":6,"II":4.44,"majIII":0.8,"miniii":4.165,"IV":6.75,"V":5.994000000000001,"VI":1.2,"majVII":0.533,"minvii":2.22,"VIII":1,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+notes = lowi,lowi,lowi,lowi,bassi,bassi,bassIV,bassIV,bassIV,bassIV,bassV,I,I,I,I,I,I,II,II,II,II,miniii,miniii,miniii,miniii,IV,IV,IV,IV,IV,IV,V,V,V,V,V,VI,minvii,minvii,VIII
+harmonicweights = {"lowi":1,"bassi":1,"bassV":3,"bassIV":3,"I":6,"II":5,"majIII":1,"miniii":5,"IV":9,"V":9,"VI":2,"majVII":1,"minvii":4,"VIII":2,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+weights = {"lowi":4,"bassi":2,"bassIV":4.5,"bassV":1.9980000000000002,"I":6,"II":4.44,"majIII":0.8,"miniii":4.165,"IV":6.75,"V":5.994000000000001,"VI":1.2,"majVII":0.533,"minvii":2.22,"VIII":1,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+notes = lowi,lowi,lowi,lowi,bassi,bassi,bassIV,bassIV,bassIV,bassIV,bassV,I,I,I,I,I,I,II,II,II,II,miniii,miniii,miniii,miniii,IV,IV,IV,IV,IV,IV,V,V,V,V,V,VI,minvii,minvii,VIII
+harmonicweights = {"lowi":1,"bassi":1,"bassV":3,"bassIV":3,"I":6,"II":5,"majIII":1,"miniii":5,"IV":9,"V":9,"VI":2,"majVII":1,"minvii":4,"VIII":2,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+weights = {"lowi":4,"bassi":2,"bassIV":4.5,"bassV":1.9980000000000002,"I":6,"II":4.44,"majIII":0.8,"miniii":4.165,"IV":6.75,"V":5.994000000000001,"VI":1.2,"majVII":0.533,"minvii":2.22,"VIII":1,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+notes = lowi,lowi,lowi,lowi,bassi,bassi,bassIV,bassIV,bassIV,bassIV,bassV,I,I,I,I,I,I,II,II,II,II,miniii,miniii,miniii,miniii,IV,IV,IV,IV,IV,IV,V,V,V,V,V,VI,minvii,minvii,VIII
+harmonicweights = {"lowi":1,"bassi":1,"bassV":3,"bassIV":3,"I":6,"II":5,"majIII":1,"miniii":5,"IV":9,"V":9,"VI":2,"majVII":1,"minvii":4,"VIII":2,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+weights = {"lowi":4,"bassi":2,"bassIV":4.5,"bassV":1.9980000000000002,"I":6,"II":4.44,"majIII":0.8,"miniii":4.165,"IV":6.75,"V":5.994000000000001,"VI":1.2,"majVII":0.533,"minvii":2.22,"VIII":1,"lownoise":0,"midnoise":0,"highnoise":0,"noise":0,"buzz":0}
+notes = lowi,lowi,lowi,lowi,bassi,bassi,bassIV,bassIV,bassIV,bassIV,bassV,I,I,I,I,I,I,II,II,II,II,miniii,miniii,miniii,miniii,IV,IV,IV,IV,IV,IV,V,V,V,V,V,VI,minvii,minvii,VIII
+rawsoundfile = magsSessionClips_2b, dur = 7.629175833333333, speed = 1.2
+rawsoundfile = magsSessionClips_2a, dur = 16.754186833333335, speed = 1
+rawsoundfile = magsSessionClips_2a, dur = 24.918641055555554, speed = 1.125
+rawsoundfile = magsSessionClips_1, dur = 35.02864105555555, speed = 1
+rawsoundfile = magsSessionClips_5b, dur = 42.506396305555555, speed = 1.3333333333333333
+rawsoundfile = magsSessionClips_5b, dur = 50.813902138888885, speed = 1.2
+rawsoundfile = magsSessionClips_1, dur = 65.94890213888888, speed = 0.6666666666666666
+rawsoundfile = magsSessionClips_1, dur = 76.07890213888889, speed = 1
+rawsoundfile = magsSessionClips_1, dur = 82.90223547222223, speed = 1.5
+rawsoundfile = magsSessionClips_4b, dur = 91.33890630555557, speed = 1.2
+rawsoundfile = magsSessionClips_1, dur = 101.49890630555558, speed = 1
+rawsoundfile = magsSessionClips_1, dur = 109.09640630555558, speed = 1.3333333333333333
+rawsoundfile = magsSessionClips_2a, dur = 115.32974697222224, speed = 1.5
+rawsoundfile = magsSessionClips_3b, dur = 122.5077516388889, speed = 1.5
+rawsoundfile = magsSessionClips_4b, dur = 131.52486719444448, speed = 1.125
+rawsoundfile = magsSessionClips_5b, dur = 138.16287186111114, speed = 1.5
+rawsoundfile = magsSessionClips_5b, dur = 145.64062711111114, speed = 1.3333333333333333
+rawsoundfile = magsSessionClips_5b, dur = 152.2986317777778, speed = 1.5
+rawsoundfile = magsSessionClips_2a, dur = 160.51308600000004, speed = 1.125
+rawsoundfile = magsSessionClips_3b, dur = 170.21375888888892, speed = 1.125
+rawsoundfile = magsSessionClips_4b, dur = 180.35176388888894, speed = 1
+rawsoundfile = magsSessionClips_2a, dur = 216.73180788888894, speed = 0.25
+rawsoundfile = magsSessionClips_2b, dur = 223.71306613888893, speed = 1.3333333333333333
+rawsoundfile = magsSessionClips_2a, dur = 232.94807713888892, speed = 1
+rawsoundfile = magsSessionClips_4b, dur = 242.03519269444448, speed = 1.125
+rawsoundfile = magsSessionClips_2b, dur = 5.182783888888888, speed = 1.8
+rawsoundfile = magsSessionClips_3b, dur = 15.949790888888888, speed = 1
+rawsoundfile = magsSessionClips_4b, dur = 31.201798388888893, speed = 0.6666666666666666
+rawsoundfile = magsSessionClips_1, dur = 71.2517983888889, speed = 0.25
+rawsoundfile = magsSessionClips_1, dur = 81.32179838888891, speed = 1
+rawsoundfile = magsSessionClips_2b, dur = 94.9843148888889, speed = 0.6666666666666666
+rawsoundfile = magsSessionClips_2a, dur = 101.20765555555556, speed = 1.5
+rawsoundfile = magsSessionClips_3b, dur = 108.55566022222223, speed = 1.5
+rawsoundfile = magsSessionClips_1, dur = 115.32899355555556, speed = 1.5
+rawsoundfile = magsSessionClips_4b, dur = 125.45699855555556, speed = 1
+rawsoundfile = magsSessionClips_2b, dur = 161.92704255555557, speed = 0.25
+rawsoundfile = magsSessionClips_2b, dur = 166.97982644444446, speed = 1.8
+rawsoundfile = magsSessionClips_3b, dur = 177.89683344444447, speed = 1
+rawsoundfile = magsSessionClips_1, dur = 218.07683344444445, speed = 0.25
+rawsoundfile = magsSessionClips_3b, dur = 228.86384044444446, speed = 1
+rawsoundfile = magsSessionClips_2a, dur = 237.98885144444446, speed = 1
+rawsoundfile = magsSessionClips_4b, dur = 278.3908714444445, speed = 0.25
+rawsoundfile = magsSessionClips_1, dur = 15.175, speed = 0.6666666666666666
+rawsoundfile = magsSessionClips_3b, dur = 22.463004666666667, speed = 1.5
+rawsoundfile = magsSessionClips_1, dur = 30.944671333333332, speed = 1.2
+rawsoundfile = magsSessionClips_3b, dur = 41.79167833333333, speed = 1
+rawsoundfile = magsSessionClips_3b, dur = 51.48235122222221, speed = 1.125
+rawsoundfile = magsSessionClips_4b, dur = 71.7283612222222, speed = 0.5
+rawsoundfile = magsSessionClips_2b, dur = 80.8733722222222, speed = 1
+rawsoundfile = magsSessionClips_3b, dur = 124.0814002222222, speed = 0.25
+rawsoundfile = magsSessionClips_2b, dur = 142.3714222222222, speed = 0.5
+rawsoundfile = magsSessionClips_4b, dur = 147.99586944444445, speed = 1.8
+rawsoundfile = magsSessionClips_1, dur = 168.01586944444446, speed = 0.5
+rawsoundfile = magsSessionClips_1, dur = 178.16586944444444, speed = 1
+rawsoundfile = magsSessionClips_4b, dur = 187.17298499999998, speed = 1.125
+rawsoundfile = magsSessionClips_1, dur = 197.20298499999998, speed = 1
+rawsoundfile = magsSessionClips_5b, dur = 202.87465555555553, speed = 1.8
+rawsoundfile = magsSessionClips_2b, dur = 212.07966655555555, speed = 1
+rawsoundfile = magsSessionClips_2b, dur = 225.83218305555556, speed = 0.6666666666666666
+rawsoundfile = magsSessionClips_2a, dur = 244.16220505555555, speed = 0.5
+rawsoundfile = magsSessionClips_3b, dur = 6.021670555555556, speed = 1.8
+rawsoundfile = magsSessionClips_1, dur = 15.019448333333333, speed = 1.125
+rawsoundfile = magsSessionClips_2b, dur = 22.718624166666668, speed = 1.2
+rawsoundfile = magsSessionClips_2b, dur = 27.881408055555557, speed = 1.8
+rawsoundfile = magsSessionClips_5b, dur = 42.90691855555556, speed = 0.6666666666666666
+rawsoundfile = magsSessionClips_3b, dur = 51.01217380555556, speed = 1.3333333333333333
+rawsoundfile = magsSessionClips_3b, dur = 72.70618780555556, speed = 0.5
+rawsoundfile = magsSessionClips_5b, dur = 81.71686069444445, speed = 1.125
+rawsoundfile = magsSessionClips_1, dur = 88.55019402777778, speed = 1.5
+rawsoundfile = magsSessionClips_5b, dur = 95.18819869444445, speed = 1.5
+rawsoundfile = magsSessionClips_2a, dur = 100.25098258333334, speed = 1.8
+rawsoundfile = magsSessionClips_3b, dur = 106.3526531388889, speed = 1.8
+rawsoundfile = magsSessionClips_1, dur = 146.5126531388889, speed = 0.25
+rawsoundfile = magsSessionClips_1, dur = 153.30598647222226, speed = 1.5
+rawsoundfile = magsSessionClips_1, dur = 160.0193198055556, speed = 1.5
+rawsoundfile = magsSessionClips_1, dur = 168.46098647222226, speed = 1.2
+rawsoundfile = magsSessionClips_2a, dur = 174.53432713888893, speed = 1.5
+rawsoundfile = magsSessionClips_5b, dur = 184.58133413888893, speed = 1
+rawsoundfile = magsSessionClips_3b, dur = 200.85184463888893, speed = 0.6666666666666666
+rawsoundfile = magsSessionClips_1, dur = 207.6051779722223, speed = 1.5
+rawsoundfile = magsSessionClips_1, dur = 214.31851130555563, speed = 1.5
+rawsoundfile = magsSessionClips_4b, dur = 254.70053130555564, speed = 0.25
+soxstr = sox  "|sox magsSessionClips_2b.mp3 -p speed 1.2 pad 0 0.05 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1 pad 0 0.03 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1.125 pad 0 0.08 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1 pad 0 0.1 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1.3333333333333333 pad 0 0.01 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1.2 pad 0 0.01 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 0.6666666666666666 pad 0 0.12 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1 pad 0 0.12 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.5 pad 0 0.15 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 1.2 pad 0 0.03 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1 pad 0 0.15 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.3333333333333333 pad 0 0.09 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1.5 pad 0 0.17 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1.5 pad 0 0 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 1.125 pad 0 0.05 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1.5 pad 0 0 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1.3333333333333333 pad 0 0.01 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1.5 pad 0 0.02 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1.125 pad 0 0.13 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1.125 pad 0 0.13 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 1 pad 0 0.05 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 0.25 pad 0 0 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 1.3333333333333333 pad 0 0.16 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1 pad 0 0.14 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 1.125 pad 0 0.12 norm -4"  magsSessionClips_twist_000_thread_000.mp3 echos 0.6 0.5 404 0.3 3043 0.3 norm -2; 
+    sox  magsSessionClips_twist_000_thread_001.mp3 echos 0.7 0.6 3559 0.4 1262 0.4 norm -2; 
+    sox  magsSessionClips_twist_000_thread_002.mp3 echos 0.7 0.6 2583 0.4 914 0.5 norm -2; 
+    sox  magsSessionClips_twist_000_thread_003.mp3 echos 0.6 0.6 3245 0.3 6083 0.3 norm -2; 
+    sox  "|sox magsSessionClips_2b.mp3 -p speed 1.8 pad 0 0.13 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1 pad 0 0 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 0.6666666666666666 pad 0 0.12 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 0.25 pad 0 0.01 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1 pad 0 0.06 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 0.6666666666666666 pad 0 0.02 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1.5 pad 0 0.16 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1.5 pad 0 0.17 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.5 pad 0 0.1 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 1 pad 0 0.04 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 0.25 pad 0 0.09 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 1.8 pad 0 0 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1 pad 0 0.15 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 0.25 pad 0 0.14 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1 pad 0 0.02 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1 pad 0 0.03 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 0.25 pad 0 0.05 norm -4"  magsSessionClips_twist_001_thread_000.mp3 echos 0.7 0.5 1765 0.4 6367 0.4 norm -2; 
+    sox  magsSessionClips_twist_001_thread_001.mp3 echos 0.7 0.4 647 0.3 2294 0.4 norm -2; 
+    sox  magsSessionClips_twist_001_thread_002.mp3 echos 0.6 0.7 3194 0.5 1245 0.5 norm -2; 
+    sox  magsSessionClips_twist_001_thread_003.mp3 echos 0.6 0.4 1409 0.5 995 0.3 norm -2; 
+    sox  "|sox magsSessionClips_1.mp3 -p speed 0.6666666666666666 pad 0 0.16 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1.5 pad 0 0.11 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.2 pad 0 0.14 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1 pad 0 0.08 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1.125 pad 0 0.12 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 0.5 pad 0 0.07 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 1 pad 0 0.05 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 0.25 pad 0 0.14 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 0.5 pad 0 0.1 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 1.8 pad 0 0.02 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 0.5 pad 0 0 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1 pad 0 0.14 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 1.125 pad 0 0.04 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1 pad 0 0.02 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1.8 pad 0 0.14 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 1 pad 0 0.11 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 0.6666666666666666 pad 0 0.11 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 0.5 pad 0 0.14 norm -4"  magsSessionClips_twist_002_thread_000.mp3 echos 0.6 0.4 1032 0.3 5507 0.3 norm -2; 
+    sox  magsSessionClips_twist_002_thread_001.mp3 echos 0.7 0.5 792 0.5 5239 0.5 norm -2; 
+    sox  magsSessionClips_twist_002_thread_002.mp3 echos 0.6 0.7 1939 0.3 2619 0.5 norm -2; 
+    sox  magsSessionClips_twist_002_thread_003.mp3 echos 0.6 0.6 2203 0.5 5482 0.3 norm -2; 
+    sox  "|sox magsSessionClips_3b.mp3 -p speed 1.8 pad 0 0.04 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.125 pad 0 0.1 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 1.2 pad 0 0.12 norm -4"  "|sox magsSessionClips_2b.mp3 -p speed 1.8 pad 0 0.11 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 0.6666666666666666 pad 0 0.09 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1.3333333333333333 pad 0 0.03 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 0.5 pad 0 0.16 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1.125 pad 0 0.16 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.5 pad 0 0.16 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1.5 pad 0 0 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1.8 pad 0 0.01 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 1.8 pad 0 0.12 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 0.25 pad 0 0.12 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.5 pad 0 0.12 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.5 pad 0 0.04 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.2 pad 0 0.1 norm -4"  "|sox magsSessionClips_2a.mp3 -p speed 1.5 pad 0 0.01 norm -4"  "|sox magsSessionClips_5b.mp3 -p speed 1 pad 0 0.09 norm -4"  "|sox magsSessionClips_3b.mp3 -p speed 0.6666666666666666 pad 0 0.12 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.5 pad 0 0.08 norm -4"  "|sox magsSessionClips_1.mp3 -p speed 1.5 pad 0 0.04 norm -4"  "|sox magsSessionClips_4b.mp3 -p speed 0.25 pad 0 0.03 norm -4"  magsSessionClips_twist_003_thread_000.mp3 echos 0.6 0.6 939 0.4 5486 0.3 norm -2; 
+    sox  magsSessionClips_twist_003_thread_001.mp3 echos 0.6 0.7 620 0.3 5967 0.4 norm -2; 
+    sox  magsSessionClips_twist_003_thread_002.mp3 echos 0.6 0.5 1757 0.5 2753 0.5 norm -2; 
+    sox  magsSessionClips_twist_003_thread_003.mp3 echos 0.7 0.5 1370 0.3 916 0.4 norm -2; 
+    
