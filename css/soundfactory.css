@@ -903,6 +903,7 @@ code {
 	font-family: Courier, 'Andale Mono', AndaleMono, Monaco, monospace;
 	font-family: var(--monospace_code);
 	font-size: 0.8em;
+	white-space: pre;
 }
 .center {
 	text-align: center;
