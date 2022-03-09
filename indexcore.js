@@ -4,7 +4,7 @@ let soundfiles = fs.readFileSync("./selectoutsoundfiles.txt").toString().split("
 let date = new Date();
 let _date = date.toString(); 
 let _timestamp = date.getTime(); 
-let _title = "sample generative sound files"; 
+let _title = "sound factory"; 
 let _root = `https://soundfactory.work/`; 
 let indexname = "index.html"
 let _url = `${_root}${indexname}`;
@@ -65,6 +65,7 @@ let body = `<body id="top">
 <main id="main" class="expand" data-state="expanded">
 <header>
 	<h1>${_title.replaceAll("_", " |  ")}</h1>
+	<h2>experiments in generative sound</h2>
 </header>
 <nav>
 <ul class="expand" >
