@@ -10,6 +10,8 @@ keys.js
 *.wav
 *.webm
 *.png
+*_threadscore_*.js
+*_threadscore_*.sh
 !*png
 scratchFiles/
 temp/
