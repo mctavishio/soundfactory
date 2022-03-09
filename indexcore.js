@@ -8,7 +8,7 @@ let _title = "generative sound files";
 let _root = `https://soundfactory.work/`; 
 let indexname = "index.html"
 let _url = `${_root}${indexname}`;
-let _abstract = `sound file index: sound threads & weavings created from recorded fragments`;
+let _abstract = `sound file index: sound threads & weavings created from recorded fragments. experiments in generative command line sox audio sequences`;
 let _pictureurl = "/apple-touch-icon.png";
 let _cssurl = "/css/soundfactory.css";
 let _codeurl = "";
@@ -70,6 +70,7 @@ let body = `<body id="top">
 <ul class="expand" >
 	<li><a href="https://www.mctavish.io/index.html" id="homelink" class="corelink">mctavish portfolio</a></li>
 </ul>
+</nav>
 <p>${_abstract}</p>`;
 body += "<p><ul>"+soundfiles.filter(sfile=>sfile!=="").reduce( (acc,sfile)=> {
 	let parts = sfile.split('/');
