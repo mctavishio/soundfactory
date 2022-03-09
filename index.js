@@ -20,7 +20,7 @@ let _abstract = `sound file index: generative output from ${_title}`;
 let _pictureurl = "/apple-touch-icon.png";
 let _cssurl = "/css/soundfactory.css";
 let _codeurl = "";
-let colors = ["warmgray", "warmwhite"];
+let colors = ["warmlightgray"];
 let head = `<!DOCTYPE html>
 <html lang="en">
 <head>
