@@ -18,9 +18,10 @@ let indexname = `index_${parts[3]}.html`;
 let _url = `${_root}${indexname}`;
 let _abstract = `sound file index: generative output from ${_title}`;
 let _text = `<p>
-::: an exercise in spinning thread from recorded sound fragments
-& then weaving these individual strands into twisted cords 
-::: an exercise in chance-infused, text-based, generative composition. 
+note that files with only one "00n" suffix are single
+threads (an exercise in spinning thread from recorded sound fragments).
+other files are various weavings / braids / twisted cords 
+composed from mixtures of the single threads.
 </p>`;
 let _pictureurl = "/apple-touch-icon.png";
 let _cssurl = "/css/soundfactory.css";
@@ -89,43 +90,41 @@ let body = `<body id="top">
 </ul>
 </nav>
 ${_text}`;
-const sfiles = soundfiles.map(file=>file.id).sort()
-	.map( id => {
-		return soundfiles.filter(sf=>sf.id===id)[0];
-	}).reduce((acc, sf) => {
-		let isthread = true;
-		if(sf.id.split("twist").length>1) {
-			if(sf.id.split("00").length>3  || sf.id.split("all").length>1) isthread=false;
-		}
-		else {
-			if(sf.id.split("00").length>2 || sf.id.split("all").length>1) isthread=false;
-		}
-	if(!isthread) acc[0].push(sf);	
-	else acc[1].push(sf);
-	return acc;
-}, [[],[]])
-body += `
-<p><ul>`;
-body += sfiles[0].reduce( (acc,sfile)=> {
+const sfiles = soundfiles.map(file=>file.id).sort().map(id=> {
+	return soundfiles.filter(sf=>sf.id===id)[0];
+});
+body += "<p><ul>"+sfiles.reduce( (acc,sfile)=> {
 	return acc + `
 <li><a href="${sfile.url}">${sfile.id}</a></li>`;
 }, "");
 body +=`
 </ul></p>`;
-
-
-
-
-body += `<!--
+const tfiles = soundfiles.map(file=>file.id).sort()
+	.filter(id => {
+		console.log(`checkid: ${id}`);
+		console.log(`split("00").length: ${id.split("00").length}`);
+		console.log(`split("all").length: ${id.split("all").length}`);
+		let isthread = true;
+		if(id.split("twist").length>1) {
+			if(id.split("00").length>3  || id.split("all").length>1) isthread=false;
+		}
+		else {
+			if(id.split("00").length>2 || id.split("all").length>1) isthread=false;
+		}
+		console.log(`isthread: ${isthread}`);
+		return isthread;
+	}).map(id=> {
+	//console.log(id);
+	return soundfiles.filter(sf=>sf.id===id)[0];
+});
+ body += `
 	<h5>individual threads</h5>`;
-body += `
-<p><ul>`;
-body += sfiles[1].reduce( (acc,sfile)=> {
+body += "<p><ul>"+tfiles.reduce( (acc,sfile)=> {
 	return acc + `
 <li><a href="${sfile.url}">${sfile.id}</a></li>`;
 }, "");
 body +=`
-</ul></p>-->`;
+</ul></p>`;
 body +=`
 </body>
 </html>`;

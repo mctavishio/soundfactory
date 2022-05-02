@@ -1,0 +1,12 @@
+bagpipe1e_thread_harmonic_000
+bagpipe1e_thread_buzz_all
+bagpipe1e_bagpipe1h_thread_simplebuzz_000_006
+mctvox1_twist_001_thread_000
+mctvox1_twist_000_thread_all
+mctvox1_twist_000_thread_003_000_echo_reverb
+if(id.split("twist").length>1) {
+	if(id.split("00").length>3  || id.split("all").length>2) isthread=false;
+}
+else {
+	if(id.split("00").length>2 || id.split("all").length>2) isthread=false;
+}

@@ -8,7 +8,9 @@ let _title = "sound factory";
 let _root = `https://soundfactory.work/`; 
 let indexname = "index.html"
 let _url = `${_root}${indexname}`;
-let _abstract = `sound file index: sound threads & weavings created from recorded fragments. experiments in generative command line sox audio sequences`;
+let _abstract = `<p>
+sound file index: sound threads & weavings created from recorded fragments.
+experiments in generative command line sox audio sequences`;
 let _pictureurl = "/apple-touch-icon.png";
 let _cssurl = "/css/soundfactory.css";
 let _codeurl = "";
