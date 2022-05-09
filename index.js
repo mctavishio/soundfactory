@@ -113,9 +113,6 @@ body += sfiles[0].reduce( (acc,sfile)=> {
 body +=`
 </ul></p>`;
 
-
-
-
 body += `<!--
 	<h5>individual threads</h5>`;
 body += `
