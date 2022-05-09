@@ -114,7 +114,11 @@
 				console.log("track="+track);
 				audio1.src = track;
 				audio1.play();
-				telegraph.innerHTML =  "<hr/><hr/>currently playing:::<br/>type:::" + type+"<br/>thread:::"+track.split("/")[5]+"<hr/><hr/>";
+				telegraph.innerHTML =  `
+<hr/><hr/>currently playing:::<br/>
+from:::<a href="index_${type}.html">${type}</a><br/>
+thread:::<a href="${track}">${track.split("/")[5]}</a>
+<hr/><hr/>`;
 				soundplaying = true;
 				soundlink.innerText = "turn off sound";
 				soundlink.classList.add("active");
